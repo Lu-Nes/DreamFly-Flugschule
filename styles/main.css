@@ -23,7 +23,41 @@ html {
   max-width: 200px;
   margin-top: 50px;
   margin-bottom: 35px;
+
+  animation:  logo-fly-in 4s ease-in-out 0s 1 both, 
+              logo-turbulences 15s ease-in-out 4.5s infinite none;
   
+}
+
+@keyframes logo-fly-in {
+  0% {
+    opacity: 0;
+    transform: translate(-60vw, 0);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: translate(0 ,0);
+  }
+}
+
+@keyframes logo-turbulences {
+  0%, 100% {
+    transform: translate(0, 0);
+
+  }
+
+  25% {
+    transform: translate(0, -7px);
+  }
+
+  50% {
+    transform: translate(0, 7px);
+  }
+
+  75% {
+    transform: translate(0, 5px) scale(1.025);
+  }
 }
 
 .header {
@@ -64,3 +98,5 @@ h1 {
 
   transition: all 0s; */
 }
+}
+
